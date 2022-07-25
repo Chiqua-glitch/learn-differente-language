@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #eee;
+    font-family: 'JoseFin Sans', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.bg-image {
+    background: url('https://i.ibb.co/G37Y9Wf/8a746d8eb265ab3ef533fa491e93f8b4.jpg') no-repeat center/cover;
+    filter: contrast(80%);
+    height: 100vh;
+    width: 100%;
+}
+
+.Iam {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 2rem 3rem;
+    width: 70vw;
+    justify-content: center;
+}
+
+.fa-tint {
+    color: rgb(160, 160, 160);
+    position: absolute;
+    top: -20px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+@keyframes color {
+    0% {color: blue;}
+    30% {color: purple}
+    50% {color: blue;}
+    80% { color: rgb(255, 0, 234);}
+    100% { color: blue;}
+}
+
+@keyframes flash {
+    50% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: black;
+  font-size: 5rem;
+  background: url('https://i.ibb.co/G37Y9Wf/8a746d8eb265ab3ef533fa491e93f8b4.jpg') no-repeat center/cover;
+  filter: contrast(80%);
+  height: 100vh;
+  width: 100%;
+}
+
+.target {
+  display: flex;
+  width: 300px;
+  text-align: left;
+  animation: color 30s alternate infinite;
+  perspective: 200px;
+  transform: translateX(10px);
+}
+
+@keyframes color {
+  0% {
+    color: blue;
+  }
+
+  50% {
+    color: #ec006e;
+  }
+
+  100% {
+    color: blue;
+  }
+}
+
+.letter {
+  transform: translateZ(200px);
+}
+
+@keyframes anim {
+  25% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+
+  32% {
+    opacity: 0;
+    transform: translateZ(-280px) translateX(200px);
+  }
+}
+
+/* ----------RAIN----------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.fas {
+  position: absolute;
+  left: 1px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+      transform: translateX(105vw);
+  }
+}

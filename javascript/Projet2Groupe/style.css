@@ -1,0 +1,21 @@
+.correct {
+    color: greenyellow;
+}
+
+.incorrect {
+    color: red;
+}
+
+@keyframes timerBar {
+    0% {
+        width: 0%;
+        background-color: green;
+    }
+    50% {
+        background-color: yellow;
+    }
+    100% {
+        width: 100%;
+        background-color: red;
+    }
+}

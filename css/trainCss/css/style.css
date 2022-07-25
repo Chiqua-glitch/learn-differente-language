@@ -1,0 +1,22 @@
+/*import*/
+@import 'header.css';
+@import 'main.css';
+@import 'footer.css';
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.none {
+    display: none;
+}

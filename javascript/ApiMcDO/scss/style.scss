@@ -1,0 +1,239 @@
+//variable
+
+$bg-color: #101311;
+$text-color: #555555;
+$white-color: white;
+$font-text: "Economica", sans-serif;
+$font-title: "Quicksand", sans-serif;
+
+.none {
+  height: 0;
+  visibility: hidden;
+}
+
+.flex {
+  height: 100%;
+  visibility: visible;
+}
+
+.block {
+  display: block;
+}
+
+.width {
+  width: 100%;
+}
+
+.showMenuBurger {
+  left: 0;
+  transition: all 1s ease;
+}
+
+.hideMenuBurger {
+  left: -55rem;
+  transition: all 2s ease;
+}
+
+.hideMenuBurger,
+.showMenuBurger {
+  top: 0;
+  position: fixed;
+}
+
+* body main .container .slider .active {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+
+  body {
+    color: $text-color;
+    font-size: 1rem;
+    margin: 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    header {
+      padding: 2rem 1rem 2rem 1rem;
+      background-color: $bg-color;
+
+      .menuBurger {
+        height: 100%;
+        width: 100%;
+        padding: 1rem 3rem 0 1rem;
+        background: #d30c5c;
+        opacity: 0.9;
+        a {
+          color: $white-color;
+          text-transform: capitalize;
+          font-family: $font-title;
+          font-weight: 500;
+        }
+        li {
+          padding-top: 1rem;
+          a {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        div {
+          position: relative;
+          left: 82vw;
+          margin-bottom: 1rem;
+          top: 2rem;
+        }
+        .hideMenuBurger {
+          cursor: pointer;
+        }
+        .hideMenu {
+          cursor: pointer;
+        }
+        .cross {
+          content: "";
+          display: block;
+          border-left: 2px solid $white-color;
+          width: 60px;
+          transform: rotate(43deg);
+          &::after {
+            content: "";
+            display: block;
+            height: 3rem;
+            border-right: 2px solid $white-color;
+            width: 60px;
+            transform: rotate(90deg) translate(-30px, 30px);
+          }
+        }
+        .menu {
+          flex-direction: column;
+          padding-left: 1rem;
+        }
+        .show {
+          max-height: 11rem;
+          transition: all 0.5s;
+          overflow: hidden;
+        }
+        .hide {
+          max-height: 0;
+          transition: all 0.5s;
+          overflow: hidden;
+        }
+      }
+      .homeImg {
+        display: block;
+        text-align: center;
+        img {
+          background-color: $white-color;
+          border-radius: 50%;
+          padding: 1rem;
+          width: 8rem;
+        }
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        div {
+          display: flex;
+          height: 2rem;
+          cursor: pointer;
+          span {
+            &::before {
+              background-color: $white-color;
+              margin: 14px 0;
+            }
+          }
+
+          span,
+          span::after,
+          span::before {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 45px;
+            background-color: $white-color;
+          }
+        }
+
+        ul {
+          display: flex;
+          column-gap: 2rem;
+        }
+        i {
+          color: $white-color;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    main {
+      .arrow {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 4rem;
+        font-size: 2rem;
+        span {
+          cursor: pointer;
+        }
+      }
+      .cont-btn {
+        text-align: center;
+        i {
+          cursor: pointer;
+        }
+      }
+      .slider {
+        img.active {
+          opacity: 1;
+          position: absolute;
+          transition: all 2s ease;
+          z-index: -1;
+          top: 0;
+          height: 55rem;
+        }
+        img {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+          transition: all 2s ease;
+          top: 0;
+          object-fit: cover;
+          height: 55rem;
+        }
+      }
+      .container {
+        max-width: 300px;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: $white-color;
+          font-family: $font-title;
+          line-height: 1.5;
+        }
+        > a {
+          background-color: rgb(190, 156, 121);
+          font-family: Quicksand;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: rgb(255, 255, 255);
+          padding: 10px 25px;
+          border-color: rgb(255, 255, 255);
+          width: 11rem;
+        }
+      }
+    }
+  }
+}

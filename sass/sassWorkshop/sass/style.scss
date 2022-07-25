@@ -1,0 +1,11 @@
+.theme {
+    &:hover {
+        background-color: red;
+    }
+}
+
+.btn {
+    .theme & {
+        background-color: red;
+    }
+}

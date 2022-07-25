@@ -1,0 +1,125 @@
+/*header > nav > ul {
+    display: flex;
+    justify-content: center;
+    background-color: rebeccapurple;
+    height: 4rem;
+}
+
+header li {
+    width: 9rem;
+    height: 100%;
+}
+
+header a {
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+header a:hover {
+    background-color: violet;
+}
+
+.menu {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 9rem;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu a {
+    background-color: rebeccapurple;
+    height: 4rem;
+}
+
+.menu .upArrow {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    height: 1.5rem;
+    width: 2rem;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+}
+
+.subMenu {
+    position: relative;
+    width: 9rem;
+    left: 10rem;
+    bottom: 10rem;
+}
+
+.subMenu.settings {
+    left: 10rem;
+    bottom: 6rem;
+}
+
+.subMenu .leftArrow {
+    height: 1.5rem;
+    width: 2rem;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    background-color: rebeccapurple;
+}
+
+.subMenu li {
+    width: 100%;
+    height: unset;
+}
+
+.subMenu ul:last-child li:first-child {
+    width: 9rem;
+}
+
+.subMenu li:first-child ul:last-child {
+    width: 9rem;
+}
+
+.subMenu li:first-child {
+    display: flex;
+}
+
+.subMenu li:first-child:not(.subMenu.settings li:first-child) {
+    align-items: center;
+}
+
+.subMenu.settings .leftArrow {
+    margin-top: 3.2rem;
+}
+
+.grouping {
+    position: relative;
+    bottom: 16rem;
+}
+
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu {
+    background-color: red;
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+}
+
+.menu span {
+    position: absolute;
+    border-radius: 50%;
+    background-color: blue;
+    width: 7px;
+    height: 7px;
+    margin: 5px;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+}
+
