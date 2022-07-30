@@ -1,4 +1,4 @@
-class Person() :
+class Person :
     def __init__(self, hair_color, eye_color, weight, height) :
         self.hair_color = hair_color
         self.eye_color = eye_color
@@ -31,7 +31,7 @@ Mars.distance_of_sun = 228
 
 Mars.get_description()
 
-class Animal() :
+class Animal :
     def __init__(self, sexe, race, color) :
         self.sexe = sexe
         self.__race = race
@@ -59,3 +59,50 @@ print(lion.get_race())
 lion.set_race2("Lion de la jungle")
 
 print(lion.get_race())
+
+class Felin :
+    nombre_de_patte = 4
+    carnivore = True
+    
+    def __init__(self, color, food, friends) :
+        self.__color = color
+        self.__food = food
+        self.friends = friends
+        
+    def get_color(self) :
+        return self.__color
+    
+    def set_color(self, new_color) :
+        self.__color = new_color
+    
+    def get_food(self) :
+        return self.__food
+    
+    def set_food(self, new_food) :
+        self.__food = new_food
+
+class Lynx(Felin) :
+    def __init__(self, race, name, color, food, friends) :
+        super().__init__(color, food, friends)
+        self.__race = race
+        self.name = name
+    
+    def get_race(self) :
+        return self.__race
+    
+timothe_le_linx = Lynx("Lynx", "Timothé", "bleu", "viande", "pumba")
+
+print(timothe_le_linx.get_food())
+
+class Guepard(Felin) :
+    def __init__(self, race, name, color, food, friends) :
+        super().__init__(color, food, friends)
+        self.__race = race
+        self.name = name
+        
+    def get_race(self) : 
+        return self.__race
+
+Theo_le_guepard = Guepard("Guepard", "Theo", "noir", "viande", "pumba")
+
+print(Theo_le_guepard.get_race())

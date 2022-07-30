@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show, .shows {
+    visibility: visible;
+}
+
+img:not(img.left, img.right) {
+    width: 500px;
+    height: 500px;
+}
+
+.left, .right {
+    width: 50px;
+    cursor: pointer;
+}
+
+.slides {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.45s ease 0s;
+}
+
+.slider {
+    text-align: center;
+    width: 500px;
+    overflow: hidden;
+}
+
+div.arrow {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
