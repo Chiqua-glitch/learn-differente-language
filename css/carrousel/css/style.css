@@ -6,14 +6,6 @@ body {
     align-items: center;
 }
 
-.hide {
-    visibility: hidden;
-}
-
-.show, .shows {
-    visibility: visible;
-}
-
 img:not(img.left, img.right) {
     width: 500px;
     height: 500px;
